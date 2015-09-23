@@ -178,6 +178,7 @@ a:hover{
 	background:#89c21a;
 	text-decoration:none;
 	border-radius:3px;
+	border:0;
 	}
 .contentWrapper{
 	width:1160px;
@@ -599,7 +600,63 @@ a:hover{
 				top:90px;
 				left:235px;
 			}
-
+.bonusBannerLeft{
+	width:570px;
+	display:inline-block;
+	vertical-align:top;
+	position:relative;
+	text-align:right;
+	margin:1em 0 0 0;
+}
+	.bonusBannerLeft .textOnBlue{
+		display:block;
+		padding:20px 30px;
+		color:#ffffff;
+		position:absolute;
+		width:360px;
+		top:190px;
+		left:20px;
+		background:#4195fe;
+		font-size:250%;
+		font-weight:bold;
+		line-height:1.2em;
+	}
+.formBlock{
+	width:568px;
+	display:inline-block;
+	vertical-align:top;
+	padding:0 0 2em 1em;
+	background: url(../images/design/bonus-bg.jpg) right bottom no-repeat;
+}
+	.formBlock p{
+		font-size:180%;
+		line-height:1.2em;
+	}
+	.bonusForm{
+		display:block;
+		padding:30px;
+		margin:2.5em 0 0 0;
+		width:300px;
+		color:#ffffff;
+		background:#4195fe;
+	}
+	.bonusForm .fancyInput{
+		width:278px;
+		color:#ffffff;
+		font-size:100%;
+		line-height:1.2em;
+		padding:10px 10px;
+		text-align:left;
+		margin:0 0 1em 0;
+		border:2px solid;
+		background:transparent;
+	}
+	.bonusForm .actionBtn{
+		display:block;
+		width:300px;
+		font-size:120%;
+		margin:0.3em 0 0 0;
+	}
 footer{
 	background:#000000;
 	font-size:82%;
