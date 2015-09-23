@@ -377,6 +377,10 @@ a:hover{
 	padding:0 0 0 60px;
 	background:url(../images/design/arrow-down.png) left 30px no-repeat;
 }
+.arrowUp{
+	padding:0 0 0 60px;
+	background:url(../images/design/arrow-up.png) left 30px no-repeat;
+}
 .tabBtns{
 	display:block;
 	text-align:left;
@@ -512,6 +516,89 @@ a:hover{
 		.counterNumber{
 			font-size:300%;
 		}
+	.stepsBg .rightBanner{
+		margin-top:0.5em;
+	}
+	.stepsBg{
+		min-height:800px;
+		background: url(../images/design/steps-bg.jpg) right bottom no-repeat;
+	}
+	.stepsBlock{
+		background: url(../images/design/steps-line.png) left 80px no-repeat;
+		position:relative;
+		height:580px;
+		width:490px;
+	}
+		.stepsList{
+			margin:0;
+			padding:0;
+			list-style-type: none;
+			counter-reset: item;
+		}
+		.stepsList li{
+			margin-left:45px;
+			position:relative;
+			display: list-item;
+			padding:10px 0 15px 0;
+			max-width:250px;
+		}
+
+		.stepsList li:before {
+			content: counter(item);
+			counter-increment: item;
+			font-size: 150%;
+			line-height: 60px;
+			font-weight: bold;
+			border: 1px solid #c6c6c6;
+			display: block;
+			width: 60px;
+			height: 60px;
+			text-align: center;
+			border-radius: 50%;
+			position:absolute;
+			left:-75px;
+			top:3px;
+		}
+		.stepsList li.doneStep:before {
+			border: 1px solid #89c21a;
+			background:#89c21a;
+			color:#ffffff;
+		}
+			.stepsList li:nth-child(1),
+			.stepsList li#feature1{
+				top:7px;
+				left:74px;
+			}
+			.stepsList li:nth-child(2),
+			.stepsList li#feature2{
+				top:28px;
+				left:165px;
+			}
+			.stepsList li:nth-child(3),
+			.stepsList li#feature3{
+				top:55px;
+				left:175px;
+			}
+			.stepsList li:nth-child(4),
+			.stepsList li#feature4{
+				top:75px;
+				left:125px;
+			}
+			.stepsList li:nth-child(5),
+			.stepsList li#feature5{
+				top:90px;
+				left:90px;
+			}
+			.stepsList li:nth-child(6),
+			.stepsList li#feature6{
+				top:95px;
+				left:155px;
+			}
+			.stepsList li:nth-child(7),
+			.stepsList li#feature7{
+				top:90px;
+				left:235px;
+			}
 
 footer{
 	background:#000000;
