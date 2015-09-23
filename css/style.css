@@ -484,6 +484,34 @@ a:hover{
 		.slideText p.price{
 			font-size:190%;
 		}
+.countersBg{
+	height:600px;
+	background: url(../images/design/counters-bg.jpg) center center #89c21a;
+	color:#ffffff;
+}
+	.countersBg .actionBtn{
+		font-size:140%;
+		background:transparent;
+		border:1px solid;
+		text-align:center;
+		margin:1em 0 0 0;
+		padding:25px 50px;
+	}
+	.counterBlock{
+		display:inline-block;
+		vertical-align:top;
+		width:240px;
+		padding:20px 30px 0 30px;
+		margin:3em 0 2em 0;
+	}
+		.counterBlock p{
+			line-height:1.3em;
+			text-align:center;
+			margin:0 0 0.3em 0;
+		}
+		.counterNumber{
+			font-size:300%;
+		}
 
 footer{
 	background:#000000;
