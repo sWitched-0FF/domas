@@ -940,6 +940,31 @@ footer{
     cursor: default;
 }
 
+.blueForm{
+	background:#4195fe;
+	width:280px;
+	padding:20px;
+	color:#ffffff;
+	margin:0;
+	}
+	.blueForm h3{
+		font-size:140%;
+	}
+	.formGroup{
+		display:inline-block;
+		position:relative;
+	}
+.error{
+	color:red;
+	position:absolute;
+	font-size:80%;
+	text-align:left;
+	top:-19px;
+	left:4px;
+}
+.fancyInput.errorinput{
+	border-color:red;
+	}
 
 /* font-family: "GothamProRegular"; */
 @font-face {

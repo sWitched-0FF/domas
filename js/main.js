@@ -5,6 +5,10 @@ $(function(){
 		$('html,body').animate({scrollTop: $('#'+$(this).data('block-id')).offset().top-90},'slow');
 	});
 	
+	$('.popupForm').fancybox({
+		padding:0
+	});
+	
 	$('form').submit(function(event) {
 		sendForm($(this));
 		event.preventDefault();

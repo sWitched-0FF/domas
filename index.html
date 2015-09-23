@@ -9,9 +9,11 @@
 	<meta name="viewport" content="width=1200">
 
 	<link href="images/favicon.png" rel="icon" type="image/png"/>
+	<link href="css/jquery.fancybox.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 
 	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
 	<script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </head>
@@ -26,7 +28,7 @@
 				<span class="phoneSlogan">тепло в одном звонке от вас</span>
 			</div>
 			<div class="callback">
-				<a href="/" class="pseudoLink">Заказать звонок</a>
+				<a href="#callback" class="pseudoLink popupForm">Заказать звонок</a>
 			</div>
 		</div>
 		<div class="headerBanner">
@@ -300,8 +302,8 @@
 			<div class="formBlock">
 				<p>Оставьте заявку и получите <b>Бесшумный конвектор в подарок!</b> при заказе —  <b>от 150 000</b> РУБ.</p>
 				<form action="#" method="post" class="bonusForm">
-					<input type="text" name="name" class="fancyInput" placeholder="Имя">
-					<input type="tel" name="phone" class="fancyInput" placeholder="Телефон">
+					<div class="formGroup"><input type="text" name="name" class="fancyInput" placeholder="Имя"></div>
+					<div class="formGroup"><input type="tel" name="phone" class="fancyInput" placeholder="Телефон"></div>
 					<button class="actionBtn">Получить подарок</button>
 				</form>
 			</div>
@@ -312,9 +314,9 @@
 			<h2>Получите бесплатный расчет и сроки прямо сейчас</h2>
 			<div class="requestBlock">
 				<form action="#" method="post" class="requestForm">
-					<input type="text" name="name" class="fancyInput" placeholder="Ваше имя">
-					<input type="tel" name="phone" class="fancyInput" placeholder="Ваш телефон">
-					<input type="email" name="email" class="fancyInput" placeholder="Ваш e-mail">
+					<div class="formGroup"><input type="text" name="name" class="fancyInput" placeholder="Ваше имя"></div>
+					<div class="formGroup"><input type="tel" name="phone" class="fancyInput" placeholder="Ваш телефон"></div>
+					<div class="formGroup"><input type="email" name="email" class="fancyInput" placeholder="Ваш e-mail"></div>
 					<button class="actionBtn">Оставить заявку</button>
 				</form>
 			</div>
@@ -335,6 +337,15 @@
         </div>
     </div>
 </footer>
-
+<div class="hidden">
+	<div id="callback">
+		<form action="#" method="post" class="requestForm blueForm">
+			<h3>Перезвоните мне:</h3>
+			<div class="formGroup"><input type="text" name="name" class="fancyInput" placeholder="Ваше имя"></div>
+			<div class="formGroup"><input type="tel" name="phone" class="fancyInput" placeholder="Ваш телефон"></div>
+			<button class="actionBtn">Оставить заявку</button>
+		</form>
+	</div>
+</div>
 </body>
 </html>
