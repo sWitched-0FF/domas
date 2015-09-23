@@ -19,7 +19,7 @@ body{
 	color:#333333;
 	font-size:100%;
 	line-height:150%;
-	min-width:1170px;
+	min-width:1200px;
 	}
 
 p,ul,ol{
@@ -37,12 +37,10 @@ h1,h2,h3,h4,h5,h6{
 	font-weight:600;
 	}
 h2{
-	text-align:center;
-	font-weight:lighter;
-	font-size:315%;
-	line-height:100%;
-	text-transform:uppercase;
-	text-shadow:0 0 10px rgba(0,0,0,0.25);
+	text-align:left;
+	font-size:250%;
+	font-weight:normal;
+	line-height:1.2em;
 	}
 strong{
 	font-weight:bold;
@@ -64,223 +62,173 @@ a:hover{
 	color:#ffffff;
 	text-decoration:none;
 	}
+.pseudoLink{
+	border-bottom:1px dashed;
+	}
+	.pseudoLink:hover{
+		border-bottom:0;
+		}
 .header{
 	overflow:visible;
-	background:rgba(0, 79, 159, 0.8);
+	background:url(../images/design/head-bg.jpg) center center #305777;
+	color:#ffffff;
 	padding: 0;
-	height:100px;
+	height:650px;
 	width:100%;
-	position: absolute;
-    z-index: 2;
 	}
 	.headerWrapper{
-		width:1110px;
-		padding:25px 30px;
-		text-align:left;
+		width:1160px;
+		padding:35px 20px;
 		margin:0 auto;
 		}
 		.logo{
-			width:445px;
+			width:220px;
 			float:left;
-			font-size:115%;
-			text-transform:uppercase;
-			margin-top: -15px;
+			font-size:130%;
 			}
 			.logo a{
 				text-decoration:none;
 				color:#ffffff;
 				display:inline-block;
-				padding:5px 0 10px 135px;
-				min-height:80px;
+				padding:25px 0 10px 85px;
+				min-height:30px;
 				background:url(../images/design/logo.png) left center no-repeat;
 				}
-		.topNav{
-			display:block;
-			margin-left:450px;
-			font-size:90%;
+		.callback{
+			width:180px;
+			float:right;
+			font-size:110%;
+			padding:25px 35px 25px 0;
+			background:url(../images/design/icon-phone.png) right center no-repeat;
 			}
-			.topNav ul{
-				display:table;
-				margin:0;
-				padding:0;
-				list-style:none;
+			.callback a{
+				text-decoration:none;
 				}
-				.topNav li{
-					display:table-cell;
-					vertical-align:middle;
-					padding-left:30px;
-					text-transform:uppercase;
-					width:20%;
+	.topHeader{
+		width:720px;
+		float:left;
+		padding:10px 0;
+		}
+		.bigPhone{
+			font-size:160%;
+			}
+	.headerBanner{
+		border:5px solid #ffffff;
+		width:955px;
+		margin:150px auto 0 auto;
+		position:relative;
+		}
+		.bannerSlogan{
+			padding:55px 20px 5px 55px;
+			display:inline-block;
+			width:300px;
+			font-size:140%;
+			line-height:2em;
+			font-weight:bold;
+			text-align:left;
+			vertical-align:top;
+			}
+		.bannerHome{
+			padding:120px 0 30px 0;
+			display:inline-block;
+			width:180px;
+			font-size:110%;
+			line-height:1.3em;
+			vertical-align:top;
+			background:url(../images/design/icon-house.png) center 70px no-repeat;
+			}
+		.bannerPrices{
+			padding:55px 20px 0 0;
+			display:inline-block;
+			width:340px;
+			font-size:170%;
+			line-height:2em;
+			text-align:right;
+			vertical-align:top;
+			}
+			.bannerPrices span{
+				display:block;
+				}
+			.bannerPrices strong{
+				font-size:200%;
+				}
+				.oldPrice{
+					position:relative;
 					}
-					.topNav a{
-						text-decoration:none;
-						color:#ffffff;
-						}
-.rightNav{
-	position:fixed;
-	right:-222px;
-	top:50%;
-	width:270px;
-	z-index:101;
-	background:#0090a5;
-	border-radius:10px 0 0 10px;
-	margin:-125px 0 0 0;
-	transition:ease-out .3s;
-	}
-	.rightNav.hiddenMenu{
-		right:-270px;
-		}
-	.rightNav:hover{
-		right:0;
-		transition:ease-out .3s;
-		}
-	.rightNav ul{
-		margin:0;
-		padding:5px 0 10px 0;
-		list-style:none;
-		}
-		.rightNav li{
-			line-height:130%;
-			padding:10px 5px 10px 49px;
+				.oldStroke{
+					position:absolute;
+					z-index:1;
+					width:236px;
+					height:32px;
+					right:0;
+					top:11px;
+					background:url(../images/design/old-stroke.png) center center no-repeat;
+					}
+		.headerBanner .actionBtn{
 			position:relative;
+			bottom:-35px;
 			}
-			.rightNav .icon{
-				width:40px;
-				height:40px;
-				margin:0;
-				float:left;
-				top:0px;
-				left:5px;
-				position:absolute;
-				background:url(../images/design/icons-menu.png) center 4px no-repeat;
-				}
-				.rightNav .icon.home{
-					background:url(../images/design/icons-menu.png) center 4px no-repeat;
-					}
-				.rightNav .icon.mapmarker{
-					background:url(../images/design/icons-menu.png) center -38px no-repeat;
-					}
-				.rightNav .icon.map{
-					background:url(../images/design/icons-menu.png) center -79px no-repeat;
-					}
-				.rightNav .icon.helmet{
-					background:url(../images/design/icons-menu.png) center -120px no-repeat;
-					}
-				.rightNav .icon.tasks{
-					background:url(../images/design/icons-menu.png) center -161px no-repeat;
-					}
-				.rightNav .icon.contacts{
-					background:url(../images/design/icons-menu.png) center -203px no-repeat;
-					}
+.actionBtn{
+	display:inline-block;
+	color:#ffffff;
+	font-size:140%;
+	font-weight:bold;
+	padding:20px 70px;
+	background:#89c21a;
+	text-decoration:none;
+	border-radius:3px;
+	}
 .contentWrapper{
-	width:1110px;
+	width:1160px;
 	margin:0 auto;
-	padding:2em 30px 4.5em 30px;
+	padding:2em 20px 4.5em 20px;
 	text-align:center;
 	position:relative;
 	z-index:1;
 	}
 	.contentWrapper h2{
 		display:block;
-		text-align:center;
+		text-align:left;
+		width:750px;
+		text-indent:-1em;
+		margin:0.5em 0 0.5em 1em;
 		}
-	.goToNextSlide{
-		position:absolute;
-		bottom:30px;
-		left:0;
-		right:0;
-		z-index:3;
-		text-align:center;
-		text-decoration:none;
-		}
-.videoslide{
-	position:relative;
-	min-height:460px;
-	overflow:hidden;
-	background:url(../images/video1.jpg) center center no-repeat;
-	background-size:cover;
+		.titleNumber{
+			display:inline-block;
+			width:1em;
+			text-indent:0;
+			font-weight:bold;
+			}
+.examplesBg{
+	background:url(../images/design/examples-bg.png) center 90px no-repeat;
 	}
-.videoslide h2{
-	width:670px;
-	color:#ffffff;
-	position:relative;
-	z-index:2;
-	margin-top: 150px;
-	}
-	.videoclip{
-		position:absolute;
-		top:100px;
-		right:0;
-		bottom:0;
-		left:0;
-		z-index:1;
+	.examplesBg .contentWrapper{
+		text-align:left;
 		}
-		.videoplayer{
-			top:50%;
-			height:0;
-			width:100%;
-			margin:0 auto;
-			position:absolute;
-			display:block;
+	.exampleBlock{
+		display:inline-block;
+		width:480px;
+		height:340px;
+		margin:10px;
+		}
+		.exampleBlock:nth-child(2){
+			margin-left:42px;
 			}
-		.playBtn{
-			display:block;
-			width:118px;
-			height:118px;
-			position:absolute;
-			top:50%;
-			left:50%;
-			margin:-59px 0 0 -59px;
-			z-index:3;
-			transition:ease-out .2s;
-			background:url(../images/design/icon-play.png) center center no-repeat;
-			cursor:pointer;
-			opacity:0;
+		.exampleBlock img{
+			border-radius:5px;
 			}
-			.playBtn:hover{
-				transition:ease-out .2s;
-				transform:scale(1.1);
-				}
-		.pauseBtn{
-			display:block;
-			width:100px;
-			height:100px;
-			position:absolute;
-			bottom:10px;
-			left:10px;
-			margin:0;
-			z-index:3;
-			transition:ease-out .2s;
-			background:url(../images/design/icon-pause.png) center center no-repeat;
-			cursor:pointer;
-			opacity:0;
+		.exampleBlock h4{
+			margin:1em 32px 0.3em 32px; 
 			}
-			.pauseBtn:hover{
-				transition:ease-out .2s;
-				transform:scale(1.1);
-				}
-		.mb_YTPTime{
-			display:none;
+		.exampleBlock p{
+			margin:0.3em 32px; 
 			}
-		#controlBar_video{
-			display:none !important;
-			}
-		.videoProgressBar{
-			position:absolute;
-			bottom:0;
-			left:0;
-			right:0;
-			height:0;
-			background:rgba(190, 190, 190, 0.3);
-			cursor:pointer;
-			}
-			.currentProgress{
-				position:absolute;
-				bottom:0;
-				left:0;
-				top:0;
-				background:rgba(190, 190, 190, 0.3);
-				}
+	.exampleNote{
+		background:#e8e8e8;
+		border-radius:5px;
+		margin:3em 5em 0 5em; 
+		padding:2em 3em;
+		}
 .planblock{
 	height:927px;
 	position:relative;
