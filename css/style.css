@@ -871,8 +871,8 @@ footer{
 /* jCarousel */
 
 .jcarousel-wrapper {
-    width:1160px;
-	margin:0 auto;
+    __width:1160px;
+	margin:0 30px;
 	position:relative;
 }
 
@@ -907,6 +907,7 @@ footer{
 .jcarousel-control-next {
     position: absolute;
 	top: 185px;
+	left:50%;
 	font-size: 0;
 	background: url(../images/design/slider-arrows.png) no-repeat #ffffff;
 	height: 90px;
@@ -921,12 +922,14 @@ footer{
 
 .jcarousel-control-prev {
 	background: url(../images/design/slider-arrows.png) left center no-repeat #ffffff;
-	left: -45px;
+	__left: -45px;
+	margin-left:-570px;
 }
 
 .jcarousel-control-next {
 	background: url(../images/design/slider-arrows.png) right center no-repeat #ffffff;
-	right: -45px;
+	__right: -45px;
+	margin-left:490px;
 }
 
 .jcarousel-control-prev:hover,

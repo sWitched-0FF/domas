@@ -56,6 +56,20 @@ $(function(){
 		autostart: true,
 		interval: 7000
 	});
+	
+	var carouselLength = $('.jcarousel > ul >li').length;
+	var carouselMinLenght = 5;
+	if(carouselLength < carouselMinLenght){
+		for(var i = 0, currentIndex = 0; i < (carouselMinLenght-carouselLength);i++){
+			if(currentIndex>carouselLength){
+				currentIndex = 1;
+			}
+			$('.jcarousel ul')
+				.append('<li>'+$('.jcarousel > ul > li:eq('+currentIndex+')').html()+'</li>');
+			currentIndex++;
+		}
+		 $('.jcarousel').jcarousel('reload');
+	}
 
 
 });
