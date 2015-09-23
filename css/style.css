@@ -187,8 +187,6 @@ a:hover{
 	margin:0 auto;
 	padding:2em 20px 4.5em 20px;
 	text-align:center;
-	position:relative;
-	z-index:1;
 	}
 	.contentWrapper h2{
 		display:block;
@@ -254,38 +252,75 @@ a:hover{
 			font-size:120%;
 			max-width:200px;
 			text-align:center;
+			padding:0 15px;
 		}
 			.featuresBlock .featuresList li:nth-child(1),
 			.featuresBlock .featuresList li#feature1{
 				top:77px;
-				left:610px;
+				left:600px;
 			}
 			.featuresBlock .featuresList li:nth-child(2),
 			.featuresBlock .featuresList li#feature2{
 				top:100px;
-				left:53px;
+				left:43px;
 			}
 			.featuresBlock .featuresList li:nth-child(3),
 			.featuresBlock .featuresList li#feature3{
 				top:440px;
-				left:265px;
+				left:255px;
 			}
 			.featuresBlock .featuresList li:nth-child(4),
 			.featuresBlock .featuresList li#feature4{
 				top:480px;
-				left:200px;
+				left:190px;
 			}
 			.featuresBlock .featuresList li:nth-child(5),
 			.featuresBlock .featuresList li#feature5{
 				top:455px;
-				left:620px;
+				left:610px;
 				max-width:100%;
 			}
 			.featuresBlock .featuresList li:nth-child(6),
 			.featuresBlock .featuresList li#feature6{
 				top:200px;
-				left:715px;
+				left:705px;
 			}
+			.featuresBlock .featuresList li .hint{
+				display:none;
+				position:absolute;
+				width:200px;
+				left:100%;
+				top:-38px;
+				background:#4195fe;
+				color:#ffffff;
+				text-align:left;
+				padding:20px;
+				border-radius:10px;
+				box-shadow:0 2px 4px -1px rgba(0,0,0,0.5);
+				z-index:3;
+			}
+				.hint:before{
+					content: "";
+					position: absolute;
+					border-right: 11px solid #4195fe;
+					border-top: 11px solid transparent;
+					border-bottom: 11px solid transparent;
+					visibility: visible;
+					top: 42px;
+					left: -10px;
+				}
+			.hint h4{
+				margin:0 0 1em 0;
+				}
+			.hint p{
+				font-size:90%;
+				}
+			.featuresList .hint .pseudoLink{
+				color:#ffffff;
+				}
+			.featuresBlock .featuresList li:hover .hint{
+				display:block;
+				}
 	.featuresListCol{
 		display:inline-block;
 		width:240px;
