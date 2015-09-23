@@ -1,6 +1,5 @@
-(function($) {
+$(function(){
 
-  $(function() {
 	$('.scrollToBlock').click(function(e){
 		e.preventDefault();
 		$('html,body').animate({scrollTop: $('#'+$(this).data('block-id')).offset().top-90},'slow');
@@ -13,10 +12,47 @@
 	$('input').blur(function(){
 		checkEmpty($(this).parent(),$(this).attr('name'));
 	});
+	
+	/*jCarousel*/
+	var jcarousel = $('.jcarousel');
+	jcarousel.jcarousel({
+				wrap: 'circular',
+				easing: 'linear',
+				animation: 800
+			});
 
-  });
+	$('.jcarousel-control-prev')
+			.on('jcarouselcontrol:active', function() {
+				$(this).removeClass('inactive');
+			})
+			.on('jcarouselcontrol:inactive', function() {
+				$(this).addClass('inactive');
+			})
+			.jcarouselControl({
+				target: '-=1'
+			});
 
-})(jQuery);
+	$('.jcarousel-control-next')
+			.on('jcarouselcontrol:active', function() {
+				$(this).removeClass('inactive');
+			})
+			.on('jcarouselcontrol:inactive', function() {
+				$(this).addClass('inactive');
+			})
+			.on('click', function(e) {
+				e.preventDefault();
+			})
+			.jcarouselControl({
+				target: '+=1'
+			});
+
+	jcarousel.jcarouselAutoscroll({
+		autostart: true,
+		interval: 7000
+	});
+
+
+});
 
 function sendForm(obForm,validate) {
 	var formData = [];
