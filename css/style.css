@@ -75,6 +75,7 @@ a:hover{
 	padding: 0;
 	height:650px;
 	width:100%;
+	background-size:cover;
 	}
 	.headerWrapper{
 		width:1160px;
@@ -376,7 +377,7 @@ a:hover{
 		font-size:110%;
 	}
 .arrowDown{
-	padding:0 0 0 60px;
+	padding:12px 0 0 60px;
 	background:url(../images/design/arrow-down.png) left 30px no-repeat;
 }
 .arrowUp{
@@ -493,6 +494,7 @@ a:hover{
 .countersBg{
 	height:600px;
 	background: url(../images/design/counters-bg.jpg) center center #89c21a;
+	background-size:cover;
 	color:#ffffff;
 }
 	.countersBg .actionBtn{
@@ -539,7 +541,7 @@ a:hover{
 		}
 		.stepsList li{
 			margin-left:45px;
-			position:relative;
+			position:absolute;
 			display: list-item;
 			padding:10px 0 15px 0;
 			max-width:250px;
@@ -573,33 +575,38 @@ a:hover{
 			}
 			.stepsList li:nth-child(2),
 			.stepsList li#feature2{
-				top:28px;
+				top:100px;
 				left:165px;
+				line-height:50px;
 			}
 			.stepsList li:nth-child(3),
 			.stepsList li#feature3{
-				top:55px;
+				top:200px;
 				left:175px;
+				line-height:50px;
 			}
 			.stepsList li:nth-child(4),
 			.stepsList li#feature4{
-				top:75px;
+				top:295px;
 				left:125px;
+				line-height:50px;
 			}
 			.stepsList li:nth-child(5),
 			.stepsList li#feature5{
-				top:90px;
+				top:385px;
 				left:90px;
 			}
 			.stepsList li:nth-child(6),
 			.stepsList li#feature6{
-				top:95px;
+				top:465px;
 				left:155px;
+				line-height:50px;
 			}
 			.stepsList li:nth-child(7),
 			.stepsList li#feature7{
-				top:90px;
+				top:525px;
 				left:235px;
+				line-height:50px;
 			}
 .bonusBannerLeft{
 	width:570px;
@@ -662,6 +669,7 @@ a:hover{
 	color:#ffffff;
 	height:350px;
 	background: url(../images/design/request-bg.jpg) center center #3f8dd5;
+	background-size:cover;
 }
 	.requestBg h2{
 		font-size:200%;
@@ -688,7 +696,21 @@ a:hover{
 	.requestForm .actionBtn{
 		font-size:120%;
 	}
-.requestBg{}
+::-webkit-input-placeholder {
+	color:#ffffff;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+	color:#ffffff;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+	color:#ffffff;
+}
+
+:-ms-input-placeholder {  
+	color:#ffffff;
+}
 footer{
 	background:#252832;
 	min-height:170px;
