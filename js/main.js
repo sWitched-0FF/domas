@@ -70,7 +70,17 @@ $(function(){
 		}
 		 $('.jcarousel').jcarousel('reload');
 	}
-
+	var valuesShowed = false;
+	$(window).scroll(function() {
+		if($(window).scrollTop()+($(window).height()-$('#counters').height())>=$('#counters').offset().top){
+			if(!valuesShowed){
+				$('.counterNumber').each(function(){
+					animateValue($(this),$(this).find('span').data('max-value'));
+				});
+				valuesShowed = true;
+			}
+		}
+	});
 
 });
 
@@ -87,7 +97,6 @@ function sendForm(obForm,validate) {
 		});
 	}
 	if(obForm.find('.error').length == 0){
-		obForm.append('<div class="progressShadow">отправка...</div>');
 		obForm.submit();
 	}
 	}
@@ -135,4 +144,19 @@ function swapFancyBox(){
 		  }
         }
       });
+}
+
+function animateValue(obBlock,value){
+	var i = 0;
+
+	function addValue () {
+	   setTimeout(function () {
+		  obBlock.find('span').text(i);
+		  i++;
+		  if (i <= value) {
+			 addValue();
+		  }
+	   }, (2000/value))
+	}
+	addValue();
 }
