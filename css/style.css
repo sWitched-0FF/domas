@@ -179,6 +179,7 @@ a:hover{
 	text-decoration:none;
 	border-radius:3px;
 	border:0;
+	cursor:pointer;
 	}
 .contentWrapper{
 	width:1160px;
@@ -657,8 +658,39 @@ a:hover{
 		font-size:120%;
 		margin:0.3em 0 0 0;
 	}
+.requestBg{
+	color:#ffffff;
+	height:350px;
+	background: url(../images/design/request-bg.jpg) center center #3f8dd5;
+}
+	.requestBg h2{
+		font-size:200%;
+		font-weight:bold;
+		text-align:center;
+		text-indent:0;
+		width:auto;
+		margin:1.5em 0;
+	}
+	.requestForm{
+		margin:4em 0 0 0;
+	}
+	.requestForm .fancyInput{
+		width:258px;
+		color:#ffffff;
+		font-size:110%;
+		line-height:1.2em;
+		padding:12px 10px;
+		text-align:left;
+		margin:0 1em 1em 0;
+		border:2px solid;
+		background:transparent;
+	}
+	.requestForm .actionBtn{
+		font-size:120%;
+	}
+.requestBg{}
 footer{
-	background:#000000;
+	background:#252832;
 	font-size:82%;
 	min-height:170px;
 	color:#ffffff;
