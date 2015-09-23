@@ -17,6 +17,8 @@ $(function(){
 		checkEmpty($(this).parent(),$(this).attr('name'));
 	});
 	
+	$('input[data-verify=phone]').mask('9 (999) 999-99-99');
+	
 	/*jCarousel*/
 	var jcarousel = $('.jcarousel');
 	jcarousel.jcarousel({

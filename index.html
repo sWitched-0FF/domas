@@ -15,6 +15,7 @@
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
 	<script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+	<script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
@@ -38,7 +39,7 @@
 				<span class="oldPrice"><strong>900</strong> руб./м<sup>2</sup><span class="oldStroke"></span></span>
 				<span><strong>от 750</strong> руб./м<sup>2</sup></span>
 			</div>
-			<a href="#request" class="actionBtn scrollToBlock" data-block-id="request">Заказать сейчас</a>
+			<a href="#requestpop" class="actionBtn popupForm" data-block-id="request">Заказать сейчас</a>
 		</div>
 	</header>
 	<section class="contentBlock examplesBg" id="section1"><a name="section1"></a>
@@ -303,7 +304,7 @@
 				<p>Оставьте заявку и получите <b>Бесшумный конвектор в подарок!</b> при заказе —  <b>от 150 000</b> РУБ.</p>
 				<form action="#" method="post" class="bonusForm">
 					<div class="formGroup"><input type="text" name="name" class="fancyInput" placeholder="Имя"></div>
-					<div class="formGroup"><input type="tel" name="phone" class="fancyInput" placeholder="Телефон"></div>
+					<div class="formGroup"><input type="tel" name="phone" class="fancyInput" placeholder="Телефон" data-verify="phone"></div>
 					<button class="actionBtn">Получить подарок</button>
 				</form>
 			</div>
@@ -315,7 +316,7 @@
 			<div class="requestBlock">
 				<form action="#" method="post" class="requestForm">
 					<div class="formGroup"><input type="text" name="name" class="fancyInput" placeholder="Ваше имя"></div>
-					<div class="formGroup"><input type="tel" name="phone" class="fancyInput" placeholder="Ваш телефон"></div>
+					<div class="formGroup"><input type="tel" name="phone" class="fancyInput" placeholder="Ваш телефон" data-verify="phone"></div>
 					<div class="formGroup"><input type="email" name="email" class="fancyInput" placeholder="Ваш e-mail"></div>
 					<button class="actionBtn">Оставить заявку</button>
 				</form>
@@ -342,7 +343,16 @@
 		<form action="#" method="post" class="requestForm blueForm">
 			<h3>Перезвоните мне:</h3>
 			<div class="formGroup"><input type="text" name="name" class="fancyInput" placeholder="Ваше имя"></div>
-			<div class="formGroup"><input type="tel" name="phone" class="fancyInput" placeholder="Ваш телефон"></div>
+			<div class="formGroup"><input type="tel" name="phone" class="fancyInput" placeholder="Ваш телефон" data-verify="phone"></div>
+			<button class="actionBtn">Оставить заявку</button>
+		</form>
+	</div>
+	<div id="requestpop">
+		<form action="#" method="post" class="requestForm blueForm">
+			<h3>Получите бесплатный расчет и сроки прямо сейчас:</h3>
+			<div class="formGroup"><input type="text" name="name" class="fancyInput" placeholder="Ваше имя"></div>
+			<div class="formGroup"><input type="tel" name="phone" class="fancyInput" placeholder="Ваш телефон" data-verify="phone"></div>
+			<div class="formGroup"><input type="email" name="email" class="fancyInput" placeholder="Ваш e-mail"></div>
 			<button class="actionBtn">Оставить заявку</button>
 		</form>
 	</div>
