@@ -285,6 +285,66 @@ a:hover{
 				top:200px;
 				left:705px;
 			}
+			.areaHighligh{
+				display:none;
+				position:absolute;
+				width:50px;
+				height:50px;
+				top:50px;
+				left:0;
+				background:url(../images/design/house-area1.png) center center;
+				}
+				.featuresBlock .featuresList li:hover .areaHighligh{
+					display:block;
+				}
+				.featuresBlock .featuresList li:nth-child(1) .areaHighligh,
+				.featuresBlock .featuresList li#feature1 .areaHighligh{
+					width: 257px;
+					height: 75px;
+					top: 127px;
+					left: -119px;
+					background:url(../images/design/house-area1.png) center center;
+				}
+				.featuresBlock .featuresList li:nth-child(2) .areaHighligh,
+				.featuresBlock .featuresList li#feature2 .areaHighligh{
+					width: 84px;
+					height: 157px;
+					top: 98px;
+					left: 68px;
+					background:url(../images/design/house-area2.png) center center;
+				}
+				.featuresBlock .featuresList li:nth-child(3) .areaHighligh,
+				.featuresBlock .featuresList li#feature3 .areaHighligh{
+					width: 361px;
+					height: 20px;
+					top: -78px;
+					left: -24px;
+					background:url(../images/design/house-area3.png) center center;
+				}
+				.featuresBlock .featuresList li:nth-child(4) .areaHighligh,
+				.featuresBlock .featuresList li#feature4 .areaHighligh{
+					width: 94px;
+					height: 53px;
+					top: -58px;
+					left: -70px;
+					background:url(../images/design/house-area6.png) center center;
+				}
+				.featuresBlock .featuresList li:nth-child(5) .areaHighligh,
+				.featuresBlock .featuresList li#feature5 .areaHighligh{
+					width: 128px;
+					height: 78px;
+					top: -41px;
+					left: -205px;
+					background:url(../images/design/house-area5.png) center center;
+				}
+				.featuresBlock .featuresList li:nth-child(6) .areaHighligh,
+				.featuresBlock .featuresList li#feature6 .areaHighligh{
+					width: 17px;
+					height: 111px;
+					top: 80px;
+					left: 5px;
+					background:url(../images/design/house-area4.png) center center;
+				}
 			.featuresBlock .featuresList li .hint{
 				display:none;
 				position:absolute;
