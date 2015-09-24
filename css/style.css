@@ -580,21 +580,22 @@ a:hover{
 			opacity:0.6;
 		}
 		.slideText{
-			padding:1em 0;
+			padding:18px 0;
 		}
 		.slideText p{
-			margin:1.5em 0 1em 0;
+			margin:22px 0 18px 0;
 			font-size:120%;
-			line-height:1.2em;
+			line-height:22px;
 		}
 		.slideText p.address{
 			font-size:100%;
 			color:#777777;
-			margin:1em 0;
+			margin:18px 0;
 		}
 		.slideText p.price{
 			font-size:190%;
-			margin:0.5em 0 1em 0;
+			line-height:32px;
+			margin:18px 0 28px 0;
 		}
 .countersBg{
 	height:600px;
