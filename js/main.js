@@ -86,6 +86,13 @@ $(function(){
 			}
 		}
 	});
+	
+	$('.featuresList li').hover(
+		function(){
+			$('.areaHighligh').hide();
+			$('.featureText').html('<div class="hint">'+$(this).find('.hint').html()+'</div>');
+			$(this).find('.areaHighligh').show();
+		});
 
 });
 

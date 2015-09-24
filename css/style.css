@@ -113,7 +113,7 @@ a:hover{
 	.topHeader{
 		width:720px;
 		float:left;
-		padding:10px 0;
+		padding:15px 0;
 		}
 		.bigPhone{
 			font-size:160%;
@@ -187,6 +187,9 @@ a:hover{
 	border:0;
 	cursor:pointer;
 	}
+	.actionBtn:hover{
+		background:#98d422;
+		}
 .contentWrapper{
 	width:1160px;
 	margin:0 auto;
@@ -353,28 +356,7 @@ a:hover{
 				}
 			.featuresBlock .featuresList li .hint{
 				display:none;
-				position:absolute;
-				width:200px;
-				left:100%;
-				top:-38px;
-				background:#4195fe;
-				color:#ffffff;
-				text-align:left;
-				padding:20px;
-				border-radius:10px;
-				box-shadow:0 2px 4px -1px rgba(0,0,0,0.5);
-				z-index:3;
 			}
-				.hint:before{
-					content: "";
-					position: absolute;
-					border-right: 11px solid #4195fe;
-					border-top: 11px solid transparent;
-					border-bottom: 11px solid transparent;
-					visibility: visible;
-					top: 42px;
-					left: -10px;
-				}
 			.hint h4{
 				margin:0 0 1em 0;
 				}
@@ -383,9 +365,6 @@ a:hover{
 				}
 			.featuresList .hint .pseudoLink{
 				color:#ffffff;
-				}
-			.featuresBlock .featuresList li:hover .hint{
-				display:block;
 				}
 	.featuresListCol{
 		display:inline-block;
@@ -406,7 +385,24 @@ a:hover{
 				color:#4195fe;
 				cursor:pointer;
 			}
-
+.featureText{
+	display:inline-block;
+	width:260px;
+	margin:2em 10px 0 10px;
+	vertical-align:top;
+	position:relative;
+}
+	.featureText .hint{
+		display:block;
+		width:220px;
+		background:#4195fe;
+		color:#ffffff;
+		text-align:left;
+		padding:20px;
+		border-radius:10px;
+		box-shadow:0 2px 4px -1px rgba(0,0,0,0.5);
+		z-index:3;
+	}
 
 #advantages{
 	height:1150px;
@@ -571,6 +567,9 @@ a:hover{
 			text-align:center;
 			margin:1em 0 0 0;
 		}
+		.imgDescription .actionBtn:hover{
+			background:rgba(255,255,255,0.3);
+		}
 		.slider li:hover .imgDescription{
 			display:block;
 		}
@@ -581,13 +580,14 @@ a:hover{
 			padding:1em 0;
 		}
 		.slideText p{
-			margin:1.5em 0;
+			margin:1.5em 0 1em 0;
 			font-size:120%;
 			line-height:1.2em;
 		}
 		.slideText p.address{
 			font-size:100%;
 			color:#777777;
+			margin:1em 0;
 		}
 		.slideText p.price{
 			font-size:190%;
@@ -605,6 +605,9 @@ a:hover{
 		text-align:center;
 		margin:1em 0 0 0;
 		padding:25px 50px;
+	}
+	.countersBg .actionBtn:hover{
+		background:rgba(255,255,255,0.3);
 	}
 	.counterBlock{
 		display:inline-block;
@@ -797,6 +800,9 @@ a:hover{
 	.requestForm .actionBtn{
 		font-size:120%;
 	}
+	.fancybox-inner .requestForm .actionBtn{
+		width: 280px;
+	}
 ::-webkit-input-placeholder {
 	color:#ffffff;
 }
@@ -924,13 +930,11 @@ footer{
 
 .jcarousel-control-prev {
 	background: url(../images/design/slider-arrows.png) left center no-repeat #ffffff;
-	__left: -45px;
 	margin-left:-570px;
 }
 
 .jcarousel-control-next {
 	background: url(../images/design/slider-arrows.png) right center no-repeat #ffffff;
-	__right: -45px;
 	margin-left:490px;
 }
 
@@ -954,13 +958,14 @@ footer{
 	}
 	.blueForm h3{
 		font-size:140%;
+		margin-top:0;
 	}
 	.formGroup{
 		display:inline-block;
 		position:relative;
 	}
 .error{
-	color:red;
+	color:#ffffff;
 	position:absolute;
 	font-size:80%;
 	text-align:left;
@@ -968,9 +973,21 @@ footer{
 	left:4px;
 }
 .fancyInput.errorinput{
-	border-color:red;
+	background:#1b80fe;
 	}
 
+	.fancybox-inner{
+		border-radius: 5px;
+		background:#4195fe;
+	}
+.fancybox-close{
+	background: url(../images/fancybox/fancy_close.png) center center no-repeat;
+	background-size:cover;
+	top: -38px;
+    right: -38px;
+    width: 18px;
+    height: 18px;
+}
 /* font-family: "GothamProRegular"; */
 @font-face {
     font-family: "Gotham Pro";
