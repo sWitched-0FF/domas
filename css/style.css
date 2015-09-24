@@ -390,13 +390,13 @@ a:hover{
 .featureText{
 	display:inline-block;
 	width:260px;
-	margin:2em 0 0 10px;
+	margin:60px 0 0 10px;
 	vertical-align:top;
 	position:relative;
 }
 	.featureText .hint{
 		display:block;
-		width:220px;
+		width:225px;
 		background:#4195fe;
 		color:#ffffff;
 		text-align:left;
@@ -907,6 +907,7 @@ footer{
 .jcarousel li {
     display:inline-block;
 	vertical-align: top;
+	float:left;
 }
 
 .jcarousel img {
@@ -921,27 +922,25 @@ footer{
 .jcarousel-control-next {
     position: absolute;
 	top: 165px;
-	left:50%;
 	font-size: 0;
-	background: url(../images/design/slider-arrows.png) no-repeat #ffffff;
+	background: url(../images/design/slider-arrows.png) no-repeat;
 	height: 90px;
-	width: 90px;
+	width: 45px;
 	margin: 0;
 	padding: 0;
 	opacity: .75;
 	display:block;
-	border-radius:50%;
 	z-index:2;
 }
 
 .jcarousel-control-prev {
-	background: url(../images/design/slider-arrows.png) left center no-repeat #ffffff;
-	margin-left:-570px;
+	background: url(../images/design/slider-arrows.png) left center no-repeat;
+	left:0;
 }
 
 .jcarousel-control-next {
-	background: url(../images/design/slider-arrows.png) right center no-repeat #ffffff;
-	margin-left:490px;
+	background: url(../images/design/slider-arrows.png) right center no-repeat;
+	right:0;
 }
 
 .jcarousel-control-prev:hover,
@@ -993,6 +992,9 @@ footer{
     right: -38px;
     width: 18px;
     height: 18px;
+}
+.fancybox-skin{
+	border-radius: 5px;
 }
 /* font-family: "GothamProRegular"; */
 @font-face {

@@ -29,12 +29,12 @@ $(function(){
 	jcarousel
     .on('jcarousel:create jcarousel:reload', function() {
         var element = $(this),
-            width = $(window).width();
+            width = $(document).width();
 		
 		if(width>1440){
-			element.jcarousel('items').css('width', (width/4 - 40) + 'px');
-			$('.slideImg').css({'width':(width/4 - 40) + 'px','height':(width/4 - 40) + 'px'});
-			$('.jcarousel-control-prev, .jcarousel-control-next').css('top',((width/4 - 40)/2-45) + 'px');
+			element.jcarousel('items').css('width', (width/4 - 37.5) + 'px');
+			$('.slideImg').css({'width':(width/4 - 37.5) + 'px','height':(width/4 - 37.5) + 'px'});
+			$('.jcarousel-control-prev, .jcarousel-control-next').css('top',((width/4 - 37.5)/2-45) + 'px');
 		}
 		else{
 			element.jcarousel('items').css('width', (width/3 - 40) + 'px');
@@ -73,11 +73,6 @@ $(function(){
 				target: '+=1'
 			});
 
-	jcarousel.jcarouselAutoscroll({
-		autostart: true,
-		interval: 7000
-	});
-	
 	var carouselLength = $('.jcarousel > ul >li').length;
 	var carouselMinLenght = 4;
 	if(carouselLength < carouselMinLenght){
