@@ -173,7 +173,7 @@ function animateValue(obBlock,value){
 		  if (i <= value) {
 			 addValue();
 		  }
-	   }, (2000/value))
+	   }, (1400/value))
 	}
 	addValue();
 }
