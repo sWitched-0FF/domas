@@ -6,7 +6,12 @@ $(function(){
 	});
 	
 	$('.popupForm').fancybox({
-		padding:0
+		padding:0,
+		beforeLoad:function(){
+			$(this.href+' input:not([type=hidden])').val('');
+			$(this.href+' form').show();
+			$(this.href+' .result').html('');
+		}
 	});
 	
 	$('form').submit(function(event) {
@@ -89,15 +94,27 @@ function sendForm(obForm,validate) {
 	obForm.find('input').each(function(){
 		formData[this.name]=this.value;
 	});
-	if(validate == 'checkEmpty'){
-		obForm.find('input').each(function(){
-			if($(this).data('required')){
-				checkRequire($(this));
+
+	obForm.find('input:not([type=hidden])').each(function(){
+		checkEmpty($(this).parent(),$(this).attr('name'));
+	});
+	//console.log('submit before check '+obForm.find('.error').length);
+	if(obForm.find('.error').length == 0){
+		var m_method=obForm.attr('method');
+		var m_action=obForm.attr('action');
+		var m_parent_class = obForm.parent().attr('class');
+		var m_data=obForm.serialize();
+		$.ajax({
+			type: m_method,
+			url: m_action,
+			data: m_data,
+			resetForm: 'true',
+			success: function(result){
+				var data = $(result).find("."+m_parent_class+"").html();
+				$("."+m_parent_class+" form").fadeOut();
+				$("."+m_parent_class+" .result").html(data);
 			}
 		});
-	}
-	if(obForm.find('.error').length == 0){
-		obForm.submit();
 	}
 	}
 
