@@ -26,6 +26,22 @@ $(function(){
 	
 	/*jCarousel*/
 	var jcarousel = $('.jcarousel');
+	jcarousel
+    .on('jcarousel:create jcarousel:reload', function() {
+        var element = $(this),
+            width = $(window).width();
+		
+		if(width>1440){
+			element.jcarousel('items').css('width', (width/4 - 40) + 'px');
+			$('.slideImg').css({'width':(width/4 - 40) + 'px','height':(width/4 - 40) + 'px'});
+			$('.jcarousel-control-prev, .jcarousel-control-next').css('top',((width/4 - 40)/2-45) + 'px');
+		}
+		else{
+			element.jcarousel('items').css('width', (width/3 - 40) + 'px');
+			$('.slideImg').css({'width':(width/3 - 40) + 'px','height':(width/3 - 40) + 'px'});
+			$('.jcarousel-control-prev, .jcarousel-control-next').css('top',((width/3 - 40)/2-45) + 'px');
+		}
+    })
 	jcarousel.jcarousel({
 				wrap: 'circular',
 				easing: 'linear',
@@ -63,7 +79,7 @@ $(function(){
 	});
 	
 	var carouselLength = $('.jcarousel > ul >li').length;
-	var carouselMinLenght = 5;
+	var carouselMinLenght = 4;
 	if(carouselLength < carouselMinLenght){
 		for(var i = 0, currentIndex = 0; i < (carouselMinLenght-carouselLength);i++){
 			if(currentIndex>carouselLength){
@@ -73,8 +89,9 @@ $(function(){
 				.append('<li>'+$('.jcarousel > ul > li:eq('+currentIndex+')').html()+'</li>');
 			currentIndex++;
 		}
-		 $('.jcarousel').jcarousel('reload');
+		 jcarousel.jcarousel('reload');
 	}
+	jcarousel.jcarousel('reload');
 	var valuesShowed = false;
 	$(window).scroll(function() {
 		if($(window).scrollTop()+($(window).height()-$('#counters').height())>=$('#counters').offset().top){

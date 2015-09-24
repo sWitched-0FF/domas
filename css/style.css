@@ -243,7 +243,9 @@ a:hover{
 .floatRight{
 	float:right;
 	}
-
+#problems{
+	text-align:left;
+}
 #problems .actionBtn{
 	margin:1.3em 0 0 0;
 }
@@ -388,7 +390,7 @@ a:hover{
 .featureText{
 	display:inline-block;
 	width:260px;
-	margin:2em 10px 0 10px;
+	margin:2em 0 0 10px;
 	vertical-align:top;
 	position:relative;
 }
@@ -543,6 +545,7 @@ a:hover{
 		.slideImg img{
 			position:relative;
 			z-index:0;
+			width:100%;
 		}
 		.imgDescription{
 			display:none;
@@ -591,6 +594,7 @@ a:hover{
 		}
 		.slideText p.price{
 			font-size:190%;
+			margin:0.5em 0 1em 0;
 		}
 .countersBg{
 	height:600px;
@@ -901,6 +905,7 @@ footer{
 
 .jcarousel li {
     display:inline-block;
+	vertical-align: top;
 }
 
 .jcarousel img {
