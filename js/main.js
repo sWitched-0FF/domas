@@ -87,6 +87,7 @@ $(function(){
 		 jcarousel.jcarousel('reload');
 	}
 	jcarousel.jcarousel('reload');
+	
 	var valuesShowed = false;
 	$(window).scroll(function() {
 		if($(window).scrollTop()+($(window).height()-$('#counters').height())>=$('#counters').offset().top){
@@ -97,6 +98,40 @@ $(function(){
 				valuesShowed = true;
 			}
 		}
+		
+		//анимируем первый блок
+		if($('.examplesBg').offset().top<$(window).scrollTop()+($(window).height())*0.3){
+			//console.log('animation 1');
+			$('.exampleBlock:eq(0) img').show().addClass('animated bounceInLeft');
+			$('.exampleBlock:eq(0) h4').show().addClass('animated bounceInLeft');
+			$('.exampleBlock:eq(0) p').show().addClass('animated bounceInLeft');
+			$('.exampleBlock:eq(1) img').show().addClass('animated bounceInRight');
+			$('.exampleBlock:eq(1) h4').show().addClass('animated bounceInRight');
+			$('.exampleBlock:eq(1) p').show().addClass('animated bounceInRight');
+			$('.exampleNote').show().addClass('animated fadeIn');
+		}
+		
+		//анимируем 2.1 блок
+		if($('.advantagesRow:eq(0)').offset().top<$(window).scrollTop()+($(window).height())*0.6){
+			$('.advantagesRow:eq(0)').css('opacity','1').addClass('animated bounceInLeft');
+		}
+		//анимируем 2.2 блок
+		if($('.advantagesRow:eq(1)').offset().top<$(window).scrollTop()+($(window).height())*0.6){
+			$('.advantagesRow:eq(1)').css('opacity','1').addClass('animated bounceInRight');
+		}
+		//анимируем 2.3 блок
+		if($('.advantagesRow:eq(2)').offset().top<$(window).scrollTop()+($(window).height())*0.6){
+			$('.advantagesRow:eq(2)').css('opacity','1').addClass('animated bounceInLeft');
+		}
+		
+		//анимируем 3 блок
+		if($('.stepsBlock').offset().top<$(window).scrollTop()+($(window).height())*0.6){
+			$('.stepsBlock li').each(function(i){
+				setTimeout(function () {
+					$('.stepsBlock li:eq('+i+')').css('opacity','1').addClass('animated bounceInLeft');
+				},i*200);
+			});
+		}
 	});
 	
 	$('.featuresList li').hover(
@@ -105,6 +140,13 @@ $(function(){
 			$('.featureText').html('<div class="hint">'+$(this).find('.hint').html()+'</div>');
 			$(this).find('.areaHighligh').show();
 		});
+		
+	$('.exampleBlock img').hide();
+	$('.exampleBlock h4').hide();
+	$('.exampleBlock p').hide();
+	$('.exampleNote').hide();
+	$('.advantagesRow').css('opacity','0');
+	$('.stepsBlock li').css('opacity','0');
 
 });
 
