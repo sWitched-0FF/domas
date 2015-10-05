@@ -209,6 +209,9 @@ a:hover{
 			text-indent:0;
 			font-weight:bold;
 			}
+.contentBlock{
+	overflow:hidden;
+}
 .examplesBg{
 	background:url(../images/design/examples-bg.png) center 90px no-repeat;
 	}
@@ -518,7 +521,7 @@ a:hover{
 		}
 	.tabPage{
 		display:none;
-		
+		overflow: hidden;
 	}
 	.tabPage.active{
 		display:block;
